@@ -165,7 +165,7 @@
             </p>
             <ul>
               <li>
-                <i class="bx bx-store-alt"></i>
+                <i class="bx bx-images"></i>
                 <div>
                   <h5>How to receive</h5>
                   <p>
@@ -174,10 +174,11 @@
                     Then tap the plus icon to add a new zil token type to the wallet.
                     <br/><br/>
                     Use the Hopium dollar contract address:
+                    <br/><br/>
+                    <textarea rows="1" cols="45" id="contract-address" readonly>zil18nzu39el6qav5g2qas6xa9m8w9cm54nskwvfqg</textarea>
                     <br/>
-                    <h5>
-                      zil18nzu39el6qav5g2qas6xa9m8w9cm54nskwvfqg
-                    </h5>
+                    <button type="button" class="btn btn-primary" onclick="copyToClipboard()">Copy</button>
+                    <br/><br/>
                     Finally tap on receive, copy your wallet address and send it to the person sending you Hopium.
                   </p>
                 </div>
@@ -724,6 +725,7 @@
   <script src="assets/vendor/purecounter/purecounter.js"></script>
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
   <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>

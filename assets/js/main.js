@@ -281,3 +281,33 @@
   });
 
 })()
+
+function copyToClipboard() {
+  /* Get the text field */
+  var copyText = document.getElementById("contract-address");
+
+  /* Select the text field */
+  copyText.select();
+  copyText.setSelectionRange(0, 99999); /* For mobile devices */
+
+  /* Copy the text inside the text field */
+  document.execCommand("copy");
+  alert("Contract address copied to clipboard");
+}
+
+var resize = function() {
+  var screenWidth = parseInt($('body').width()), contract = document.getElementById("contract-address");
+  
+  if (screenWidth < 600) {
+    contract.setAttribute("cols", "30");
+    contract.setAttribute("rows", "2");
+  }
+}
+
+$( window ).resize(function() {
+  resize();
+});
+
+$( document ).ready(function() {
+  resize();
+});
